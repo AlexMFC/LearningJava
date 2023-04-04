@@ -21,7 +21,7 @@ public class Employee extends Person  {
         System.out.println("Digite o trabalho pretendido");
         Scanner keyboard = new Scanner(System.in);
         this.setSector(keyboard.next());
-        System.out.println("Seu novo trabalho eh: " + this.getSector() +"\n Deseja confirmar? 1 - Nao / 2- Sim");
+        System.out.println("Seu novo trabalho eh: " + this.getSector() +"\n Deseja confirmar? 1 - Nao. / 2- Sim.");
         int confirm = keyboard.nextInt();
         if(confirm == 1){
             System.out.println("Nao confirmado");

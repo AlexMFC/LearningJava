@@ -38,6 +38,7 @@ public class Polimorfismo {
         kangaroo.setAge(7);
         kangaroo.setMembers(4);
         kangaroo.move();
+        kangaroo.usePouch();
         
         dog.setWeight(10);
         dog.setAge(8);
