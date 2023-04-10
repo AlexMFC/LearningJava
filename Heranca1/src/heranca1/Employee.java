@@ -23,13 +23,13 @@ public class Employee extends Person  {
         this.setSector(keyboard.next());
         System.out.println("Seu novo trabalho eh: " + this.getSector() +"\n Deseja confirmar? 1 - Nao. / 2- Sim.");
         int confirm = keyboard.nextInt();
-        if(confirm == 1){
-            System.out.println("Nao confirmado");
-        } else if (confirm == 2){
-            System.out.println("Confirmado");
-            this.setIsWorking(true);
-        } else{
-            throw new Error ("Opcao invalida");
+        switch (confirm) {
+            case 1 -> System.out.println("Nao confirmado");
+            case 2 -> {
+                System.out.println("Confirmado");
+                this.setIsWorking(true);
+            }
+            default -> throw new Error ("Opcao invalida");
         }
     }
    

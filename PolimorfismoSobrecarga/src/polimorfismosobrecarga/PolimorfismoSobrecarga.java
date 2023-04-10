@@ -20,8 +20,8 @@ public class PolimorfismoSobrecarga {
         
         mammal.emmitSound();
         wolf.emmitSound();
-        
         dog.emmitSound();
+        
         dog.react("amigavel");
         dog.react("agressiva");
         
