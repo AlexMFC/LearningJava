@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author alexs
- *
- */
-module Hostel {
-}
