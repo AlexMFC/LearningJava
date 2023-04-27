@@ -39,10 +39,12 @@ public class Main {
 		
 		System.out.println("\nBusy rooms:");
 		for (int i = 0; i < rent.length; i++) {
-			if (rooms[i]!= null) {
+			if (rent[i]!= null) {
 				System.out.println(rent[i].getRoom() +": " 
 									+ rent[i].getStudent().getName() + ", "
 									+ rent[i].getStudent().getEmail());
+			} else {
+				continue;
 			}
 		}
 		
