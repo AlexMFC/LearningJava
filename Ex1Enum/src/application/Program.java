@@ -34,8 +34,8 @@ public class Program {
 		
 		System.out.println("How many contracts to this worker?");
 		int n = keyboard.nextInt();
-		for(int i = 0; i<=n; i++) {
-			System.out.println("Enter contract #" + i + " data:");
+		for(int i = 0; i<n; i++) {
+			System.out.println("Enter contract #" + (i+1) + " data:");
 			System.out.println("DD/MM/YYYY: ");
 			Date contractDate = fmt1.parse(keyboard.next());
 			System.out.println("Value per hour: ");
@@ -48,7 +48,7 @@ public class Program {
 		
 		System.out.println("Enter month and year to calculate income (MM/YYYY): ");
 		String monthAndYear = keyboard.next();
-		int month = Integer.parseInt(monthAndYear.substring(0,2));
+		int month = Integer.parseInt(monthAndYear.substring(0, 2));
 		int year = Integer.parseInt(monthAndYear.substring(3));
 		
 		System.out.println("Name: "+ worker.getName());

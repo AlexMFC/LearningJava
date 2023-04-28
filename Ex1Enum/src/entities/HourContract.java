@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class HourContract {
 	private Date date;
-	private Double valuePerHour;
+	private double valuePerHour;
 	private Integer hours;
 	
 	public HourContract() {
@@ -12,14 +12,13 @@ public class HourContract {
 	
 	
 	public HourContract(Date date, Double valuePerHour, Integer hours) {
-		super();
 		this.date = date;
 		this.valuePerHour = valuePerHour;
 		this.hours = hours;
 	}
 
-	public Double totalValue() {
-		return valuePerHour*hours;
+	public double totalValue() {
+		return (this.getValuePerHour()*this.getHours());
 	}
 	
 	public Date getDate() {

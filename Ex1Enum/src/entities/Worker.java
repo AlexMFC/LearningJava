@@ -16,7 +16,6 @@ public class Worker {
 	
 	
 	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
-		super();
 		this.name = name;
 		this.level = level;
 		this.baseSalary = baseSalary;
@@ -32,18 +31,18 @@ public class Worker {
 		contracts.remove(contract);
 	}
 	
-	public Double income (Integer year, Integer month) {
-		double sum = baseSalary;
+	public double income (int year, int month) {
+		double total = 0;
 		Calendar cal = Calendar.getInstance();
 		for (HourContract c : contracts) {
 			cal.setTime(c.getDate());
 			int c_year = cal.get(Calendar.YEAR);
 			int c_month = cal.get(Calendar.MONTH);
-			if(c_month == month && c_year == year) {
-				sum += c.totalValue();
+			if(c_month +1 == month && c_year == year) {
+				total = this.getBaseSalary()+ c.totalValue();
 			}
 		}
-		return sum;
+		return total;
 	}
 	
 	public String getName() {
